@@ -1,0 +1,11 @@
+<?php
+
+namespace XMLDatatype;
+
+class Base64Binary extends String
+{
+    public function getName()
+    {
+        return 'base64Binary';
+    }
+}
