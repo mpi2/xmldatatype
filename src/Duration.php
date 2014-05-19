@@ -27,13 +27,7 @@ class Duration extends ADataType
     public function setValue($value)
     {
         if ($value) {
-            $regex = '/^[+\-]?P'
-                   . '(\d+Y)?'
-                   . '(\d+M)?'
-                   . '(\d+D)?T?'
-                   . '(\d+H)?'
-                   . '(\d+M)?'
-                   . '(\d+(\.\d+)?S)?$/';
+            $regex = '/^[+\-]?P(\d+Y)?(\d+M)?(\d+D)?T?(\d+H)?(\d+M)?(\d+(\.\d+)?S)?$/';
             if ( ! preg_match($regex, $value) || (strpos($value, 'S') !== false && false === strpos($value, 'T')))
                 throw new \XMLDatatype\Exception\UnexpectedValueException('Bad Duration');
             $this->value = $value;
