@@ -219,6 +219,7 @@ pip-log.txt
 ## My Ignore
 #############
 
+.svn/
 composer.lock
 composer.phar
 vendor/
